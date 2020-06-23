@@ -4,7 +4,9 @@ const getSortedUniqueSkills = (users) => {
   const uniqueSkills = [];
   users.forEach((user) => {
     user.skills.forEach((skill) => {
-      if (!uniqueSkills.includes(skill)) uniqueSkills.push(skill);
+      if (!uniqueSkills.includes(skill)) {
+        uniqueSkills.push(skill);
+      }
     });
   });
   return uniqueSkills.sort();
