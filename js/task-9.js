@@ -1,10 +1,10 @@
 import users from "./users.js";
 
 const getNamesSortedByFriendsCount = (users) => {
-  const sortedNames = users
+  const usersArr = [...users];
+  return usersArr
     .sort((min, max) => min.friends.length - max.friends.length)
     .map((user) => user.name);
-  return sortedNames;
 };
 
 console.log(getNamesSortedByFriendsCount(users));
